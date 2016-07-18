@@ -18,5 +18,8 @@ from django.conf.urls import url
 from .views import home
 
 urlpatterns = [
-    url('', home, name='home'),
+    url(r'^$', home, name='home'),
+    url(r'^login/$', 'django.contrib.auth.views.login',
+        {'template_name': 'admin/login.html'}),
+    url(r'^logout/$', 'django.contrib.auth.views.logout'),
 ]

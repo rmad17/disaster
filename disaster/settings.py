@@ -17,14 +17,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # django modules
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
+    # app modules
     'map',
+    # 3rd party modules
+    'rest_framework',
+    'django_extensions',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -64,7 +68,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'disaster.wsgi.application'
-
+LOGIN_REDIRECT_URL = '/map/'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
