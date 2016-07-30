@@ -15,11 +15,12 @@ Including another URLconf
 """
 
 from django.conf.urls import url
+from django.contrib.auth.views import login, logout
+
 from .views import home
 
 urlpatterns = [
     url(r'^$', home, name='home'),
-    url(r'^login/$', 'django.contrib.auth.views.login',
-        {'template_name': 'admin/login.html'}),
-    url(r'^logout/$', 'django.contrib.auth.views.logout'),
+    url(r'^login/$', login, {'template_name': 'admin/login.html'}),
+    url(r'^logout/$', logout, name='logout'),
 ]
