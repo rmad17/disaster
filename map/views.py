@@ -5,4 +5,6 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse("Hello Django")
+    # return HttpResponse("Hello Django")
+    context = {}
+    return render(request, 'index.html', context)
