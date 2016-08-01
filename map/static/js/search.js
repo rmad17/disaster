@@ -8,7 +8,6 @@
 window.onload = function() {
     L.mapbox.accessToken = 'pk.eyJ1Ijoicm1hZDE3IiwiYSI6ImNpaHV1aWZwaTAxd2t0N2tobGJ3dmxjZmEifQ.ZbLXHwj23H1Yy8YN3VJctg';
     mapboxgl.accessToken = 'pk.eyJ1Ijoicm1hZDE3IiwiYSI6ImNpaHV1aWZwaTAxd2t0N2tobGJ3dmxjZmEifQ.ZbLXHwj23H1Yy8YN3VJctg';
-    debugger;
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
